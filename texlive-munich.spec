@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /biblio/bibtex/contrib/munich
+# catalog-date 2007-03-10 12:18:05 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-munich
 Version:	20070310
 Release:	1
@@ -43,6 +49,7 @@ to such author-date styles as harvard and oxford.
 %doc %{_texmfdistdir}/doc/latex/munich/example_DB.bib
 %doc %{_texmfdistdir}/doc/latex/munich/example_munich_Bibtex_style.pdf
 %doc %{_texmfdistdir}/doc/latex/munich/example_munich_Bibtex_style.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -53,3 +60,5 @@ to such author-date styles as harvard and oxford.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
