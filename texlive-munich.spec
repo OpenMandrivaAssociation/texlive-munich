@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-munich
 Version:	20070310
-Release:	5
+Release:	6
 Summary:	An alternative authordate bibliography style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/munich
