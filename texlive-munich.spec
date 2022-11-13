@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /biblio/bibtex/contrib/munich
-# catalog-date 2007-03-10 12:18:05 +0100
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-munich
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	An alternative authordate bibliography style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/munich
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/munich.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/munich.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/munich.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/munich.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ German (and, more generally, Continental European) alternative
 to such author-date styles as harvard and oxford.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -43,24 +37,10 @@ to such author-date styles as harvard and oxford.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070310-2
-+ Revision: 754234
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070310-1
-+ Revision: 719088
-- texlive-munich
-- texlive-munich
-- texlive-munich
-- texlive-munich
-
