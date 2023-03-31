@@ -1,6 +1,6 @@
 Name:		texlive-munich
 Version:	15878
-Release:	1
+Release:	2
 Summary:	An alternative authordate bibliography style
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/munich
